@@ -108,9 +108,7 @@ export class bym extends plugin {
             resolve()
           }, Math.min(t.length * 200, 3000))
         })
-        await this.reply(finalMsg, (this._genProp() < 10), {
-          recallMsg: fuck ? 10 : 0
-        })
+        await this.reply(finalMsg, (this._genProp() < 10))
 
         if (Config.bymContinue) {
           this.finish("_handleContinue", false)
